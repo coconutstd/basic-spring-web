@@ -1,6 +1,6 @@
 # Project exclude paths
 
-.idea
+.idea/
 .gradle
 # Created by https://www.toptal.com/developers/gitignore/api/intellij,java-web
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij,java-web
