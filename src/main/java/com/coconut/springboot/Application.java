@@ -1,4 +1,4 @@
-package com.coconut.springboot.web;
+package com.coconut.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

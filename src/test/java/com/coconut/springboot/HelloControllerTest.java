@@ -1,6 +1,6 @@
-package com.coconut.springboot.web;
+package com.coconut.springboot;
 
-import com.coconut.springboot.web.web.HelloController;
+import com.coconut.springboot.web.HelloController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

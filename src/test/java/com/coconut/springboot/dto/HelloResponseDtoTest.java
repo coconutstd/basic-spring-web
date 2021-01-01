@@ -1,6 +1,6 @@
-package com.coconut.springboot.web.dto;
+package com.coconut.springboot.dto;
 
-import com.coconut.springboot.web.web.dto.HelloResponseDto;
+import com.coconut.springboot.web.dto.HelloResponseDto;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
