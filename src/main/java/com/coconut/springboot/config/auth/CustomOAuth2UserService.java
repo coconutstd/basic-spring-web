@@ -1,5 +1,6 @@
 package com.coconut.springboot.config.auth;
 
+import com.coconut.springboot.domain.user.User;
 import com.coconut.springboot.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -37,11 +38,10 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
 
         return new DefaultOAuth2User(
                 Collections.singleton(new
-                                SimpleGrantedAuthority(user.getRoleKey()),
+                                SimpleGrantedAuthority(user.getRoleKey())),
                         attributes.getAttributes(),
-                        attributes.getNameAttributeKey()
-                        );
-        )
+                        attributes.getNameAttributeKey());
+    }
 
         private User saveOrUpdate(OAuthAttributes attributes){
             User user = userRepository.findByEmail(attributes.getEmail())
