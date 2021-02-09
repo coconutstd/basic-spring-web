@@ -1,5 +1,7 @@
 package com.coconut.springboot.config.auth;
 
+import com.coconut.springboot.config.auth.dto.OAuthAttributes;
+import com.coconut.springboot.config.auth.dto.SessionUser;
 import com.coconut.springboot.domain.user.User;
 import com.coconut.springboot.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -43,11 +45,10 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
                         attributes.getNameAttributeKey());
     }
 
-        private User saveOrUpdate(OAuthAttributes attributes){
-            User user = userRepository.findByEmail(attributes.getEmail())
-                    .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
-                    .orElse(attributes.toEntity());
-            return userRepository.save(user);
-        }
+    private User saveOrUpdate(OAuthAttributes attributes){
+        User user = userRepository.findByEmail(attributes.getEmail())
+                .map(entity -> entity.update(attributes.getName(), attributes.getPicture()))
+                .orElse(attributes.toEntity());
+        return userRepository.save(user);
     }
 }
